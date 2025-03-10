@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.andi.com</title>
+    <style>
+                body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: purple;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            justify-content: center;
+        }
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            flex: 1; /* Make buttons flexible */
+            min-width: 120px; /* Prevents them from becoming too small */
+            text-align: center;
+        }
+        .navbar a:hover {
+            background-color: rgb(180, 107, 180);
+        }
+        .content, .home-content, .contact-details,.products-services,.digital-marketing,.cloud-software {
+            padding: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            font-size: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column; /* Stack links vertically */
+                align-items: center;
+            }
+            .navbar a {
+                width: 100%;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            .content, .home-content, .contact-details {
+                padding: 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+            .content, .home-content, .contact-details {
+                padding: 10px;
+            }
+        }
+        .slider-container {
+    position: relative;
+    width: 100%; /* Set width as needed */
+    height: 500px; /* Set height as needed */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.site-header {
+    background-color:rgb(44, 41, 41); /* Adjust color as needed */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+.border-box {
+    border: 5px solid black;
+    padding: 10px;
+    width: fit-content;
+    text-align: center;
+ 
+}
+
+
+#prevBtn { left: 10px; }
+#nextBtn { right: 10px; }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#product">Product & Service</a>
+        <a href="#digital-marketing">Digital Marketing</a>
+        <a href="#cloud-software">Cloud Software</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+    <div class="content" id="home">
+        <h1>Welcome !</h1>
+        <p>Explore our services and get in touch with us.</p>
+    </div>
+    <div class="slider-container">
+        <button id="prevBtn">❮</button>
+        <div class="slider">
+            <img src="banner2.jpg" class="active">
+            <img src="banner1.png">
+        </div>
+        <button id="nextBtn">❯</button>
+    </div>
+    
+    <div class="contact-details" id="contact-details" style="display: none;">
+        <h2>Contact Details</h2>
+        <p><strong>Email:</strong> info@andisoftwaresolutions.com</p>
+        <p>We reply within 24 hours</p>
+        <p><strong>Sales:</strong> +91-7015574125 | ab@andisoftwaresolutions.com</p>
+        <p><strong>Support:</strong> +91-7015574125 | support@andisoftwaresolutions.com</p>
+        <p><strong>Marketing:</strong> +91-7015574125 | sales@andisoftwaresolutions.com</p>
+        <p><strong>Technical:</strong> +91-7015574125 | dh@andisoftwaresolutions.com</p>
+        <p><strong>Website:</strong> <a href="http://www.andisoftwaresolutions.com" target="_blank">www.andisoftwaresolutions.com</a></p>
+    </div>
+    <div class="home-content" id="home-content" style="display: none;">
+        <h2>ANDi Software Solutions makes technology and information work for business</h2>
+        <p>Use our products to grow, protect, and simplify your business processes. Our tools enable our users to attract, keep & further increase their end customers.</p>
+    
+        <h3>We help you to grow</h3>
+        <p>We carefully study markets, trends, emerging practices for industry & region and add learnings to make our products help you grow globally.</p>
+    
+        <h3>We are united by a strong set of values & focused on client impact.</h3>
+        <p>The quality of our team is the pivot stone in our ability to serve our clients. For this reason, we invest tremendous resources in identifying exceptional people, developing their skills, and creating an environment to deliver best-in-class products to customers.</p>
+    
+        <h3>We help make change happen.</h3>
+        <p>Our experience, tools, and hands-on support help clients achieve their goals by using our products & services.</p>
+    
+        <h3>Honesty</h3>
+        <p>This guiding principle helped us build long-term relationships with our customers and partners across the globe.</p>
+    
+        <h3>Technical Skills</h3>
+        <p>Our team is proficient in the core technology we support. We actively participate in industry conferences to bring refined cutting-edge solutions to meet client needs.</p>
+    
+        <h3>Commitment</h3>
+        <p>We understand that the success of the business fundamentally depends on the people in it. We put people first and do not rest until our clients are satisfied and delighted.</p>
+    
+        <h3>Originality</h3>
+        <p>Our team believes in original content and designs. We do development and content writing ourselves rather than copying the content from existing websites.</p>
+    </div>
+    <div class="digital-marketing" id="digital-marketing" style="display: none;">
+        <h2>Digital Marketing</h2>
+        <p>Digital Marketing is a segment of internet marketing. It helps in the utilization of social networking websites as a marketing tool.</p>
+        <p>The aim of Digital MARKETING is to produce content for users which they will share with their social network to help a company.</p>
+        <p>It helps in increasing brand exposure and broadening customer reach.</p>
+    </div>
+    <div class="products-services" id="products-services" style="display: none;">
+        <h2>Products & Services</h2>
+    
+        <h3>Responsive Website Designing & Development</h3>
+        <p>We develop all types of websites (Static, Dynamic, E-Commerce) using creative ideas, themes, and the latest technology. We host them on our high-speed server for a best-in-class experience.</p>
+    
+        <h3>Software Development</h3>
+        <p>Software development is the process of conceiving requirements, programming, documenting & testing solutions before delivery and providing after-sales support. Our developer team uses the latest technologies, and we deliver software at economical prices.</p>
+    
+        <h3>Mobile App Development</h3>
+        <p>We specialize in Android and iOS app development, portal apps, and e-commerce apps. We innovate to match shifting user behaviors in accessing the internet.</p>
+    
+        <h3>Bulk SMS</h3>
+        <p>Try our API Gateway for SMS with instant setup and dedicated support. We provide Promotional SMS, Transactional SMS, and Voice SMS with an accurate database.</p>
+    
+        <h3>Toll-Free Number</h3>
+        <p>Encourage more customer interactions with our premium Toll-Free Number, featuring IVR greeting messages and state-of-the-art functions.</p>
+    
+        <h3>Short Code Service</h3>
+        <p>Short codes are shorter than regular phone numbers and are used for messaging systems. We provide short message services—try our service demo!</p>
+    
+        <h3>Missed Call Service</h3>
+        <p>Our reliable missed call alert service comes at an economical price without compromising data security. Try our online panel for a demo.</p>
+    
+        <h3>WhatsApp Promotion Panel</h3>
+        <p>Promote your business and contact customers with our top-tier WhatsApp panel. Try our demo today!</p>
+    
+        <h3>Animation Clips</h3>
+        <p>Our creative team produces 2D/3D animations with human or robotic voice-overs tailored to your business needs. Contact us for more details.</p>
+    
+        <h3>Advanced Hosting</h3>
+        <p>We offer high-speed hosting from our fast servers, ensuring customers receive the best-in-class experience.</p>
+    </div>
+    
+    <div class="cloud-software" id = "cloud-software" style="display: none;">            
+                <h3>ANDI AMC</h3>
+                <p>Sector - Business
+        
+                    Suitable for all kind of service providers for managing / record keeping of their annual manitance contracts online with detailed customer and service database
+                    
+                    List Price : INr 25,200 + GST</p>
+            
+                <h3>ANDI Barcode</h3>
+                <p>Sector - Business
+        
+                    Easy cloud base generation and printing of barcode suitable for any kind of products.
+                    
+                    List Price : INr 7,200 + GST</p>
+            
+                <h3>Mobile App Development</h3>
+                <p>We specialize in Android and iOS app development, portal apps, and e-commerce apps. We innovate to match shifting user behaviors in accessing the internet.</p>
+            
+                <h3>ANDI business ERP</h3>
+                <p>Sector - Business
+        
+                    Advanced business ERP to manage Multiple business & Multiple location warehouses efficiently. It has powerful user and role management module with adanced product management functions. Its inbuilt Contacts management module for customers as well as suppliers supports Purchase, Sales and Expense management with payment alerts. This ERP is equiped with Tax / tax groups function and have customize invoice & product labels priniting options with details report generation. This Business ERP is must for growing organisations..
+                    
+                    List Price : INr 43,200 + GST</p>
+            
+                <h3>ANDI Courier</h3>
+                <p>Sector - Business
+        
+                    Software designed for courier companies to monitor the logistics of storage and handling of cargo from its booking till final destination efficiently.
+                    
+                    List Price : INr 18,000 + GST</p>
+            
+                <h3>ANDI Crowd Funding</h3>
+                <p>Short codes are shorter than regular phone numbers and are used for messaging systems. We provide short message services—try our service demo!</p>
+            
+                <h3>Missed Call Service</h3>
+                <p>Sector - Business
+        
+                    Software to manage online crowd funding functions like donation, Charity funding, Bidding, etc
+                    
+                    List Price : INr 28,800 + GST</p>
+            
+                <h3>ANDI dVC1</h3>
+                <p>Sector - Business
+        
+                    Mini static website or Simple online profile maker with all details like social icons, contact details, profile, portal, business activities etc at home page & appointment booking option as per availability. This is suitable for all kind of business / persons from doctors to job seekers.
+                    
+                    List Price : INr 27,000 + GST</p>
+            
+                <h3>ANDi dVC2</h3>
+                <p>Sector - Business
+        
+                    Software for making Online profiles (dVC card) with photo, location, social media links and contact details. In addition, the cards has integrated organic visiter count, product display section and order booking with payment option using PayTM / GooglePay or Phonepay account links. End card users can add/modify products online in his card including the product name, photos, price, tax and video links etc. These cards gives flexibility of E-Com function with complete business cycle from display + pricing + ordering + payment in it !!
+                    
+                    List Price : INr 36,000 + GST</p>
+            
+                <h3>ANDi dVC3</h3>
+                <p>Sector - Business
+        
+                    Basic single page online profile maker (digital business card) with clickable links for phone number, whatsapp, email, website and social media links. User can change its design templete by himself online to give fresh look everytime - suitable for all kind of persons.
+                    
+                    List Price : INr 27,000 + GST</p>
+                    <h3>ANDi Garage</h3>
+                    <p>Sector - Business
+        
+                        Suitable for auto garage / repair workshops with inventory and reporting system. Admin can add roles as employee, customer, accountant in it and manage all kind of workshop activities starting from Job card creation to invoicing from this software online.
+                        
+                        List Price : INr 27,000 + GST</p>
+                    <h3>ANDi Gym</h3>
+                    <p>Sector - Business
+        
+                        Suitable for modern gym for managing all kind of Gym activities including training & suppliment records
+                        
+                        List Price : INr 21,600 + GST</p>
+                    <h3>ANDi HRM</h3>
+                    <p>Sector - Business
+        
+                        Suitable for companies / industries for HRM related activities like employee management with attendance, payroll module, Sales, purchase, inventory & expenses etc to smoothly run organisations
+                        
+                        List Price : INr 28,800 + GST</p>
+                    <h3>ANDi Inventory 1</h3>
+                    <p>Sector - Business
+        
+                        Basic inventory management system for pharmaceutical shops, having products, expiry dates, purchase & sales for stock keeping purpose.
+                        
+                        List Price : INr 14,400 + GST</p>
+                    <h3>ANDi Inventory 2</h3>
+                    <p>Sector - Business
+        
+                        Simple inventory system with order booking & invoice module management - suitable for small shops owners.
+                        
+                        List Price : INr 16,200 + GST</p>
+                    <h3>ANDi Inventory 3</h3>
+                    <p>Sector - Business
+        
+                        Simple Inventory management system for SOHO business. Having product, purchase, Vendor, Sale & customer modules with reporting function.
+                        
+                        List Price : INr 21,600 + GST</p>
+                    <h3>ANDi Inventory 4</h3>  
+                    <p>Sector - Business
+        
+                        Online inventory system with order management for keeping track of all items - suitable for small shop keeper with invoicing function
+                        
+                        List Price : INr 25,200 + GST</p>
+                    <h3>ANDi Laundry</h3>
+                    <p>Sector - Business
+        
+                        Online order booking portal is made for drycleaners. Here customers can online book their orders, select pickup timing, make payment (cash/online). Admin can manage all activities and also ask applications for service providers.
+                        
+                        List Price : INr 18,000 + GST</p>
+                    <h3>ANDi Leads 1</h3>
+                    <p>Sector - Business
+        
+                        Cloud based online Lead management software for capturing leads, making quotation, assigning tasks, making Sales invoice, etc. Most suitable for organisations with sales team to manage complete leads records with unlimited users. Low cost & easy to use software
+                        
+                        List Price : INr 23,400 + GST</p>
+                    <h3>ANDi Leads 2</h3>
+                    <p>Sector - Business
+        
+                        A perfect Lead Management portal. Admin can create multiple users, multiple products, multi cities, etc and assign leads to any user. Users can add daily leads progress & followups with source of leads to smoothly monitoring leads by admin.
+                        
+                        List Price : INr 18,000 + GST</p>
+                        <h3>ANDi Loan</h3>
+                        <p>Sector - Business
+        
+                            Suitable for loan provider companies, agents for keeping record of loan processes and notifications of due cases and premium.
+                            
+                            List Price : INr 27,000 + GST</p>
+                        <h3>ANDi Pharmacy</h3>
+                        <p>Sector - Business
+        
+                            Suitable for chemist / Pharmacy shops for keeping record of medicines and their substitutes.
+                            
+                            List Price : INr 21,600 + GST</p>
+                        <h3>ANDi Project</h3>
+                        <p>Sector - Business
+        
+                            Suitable for any company for managing its client works efficiently. Admin can create multiple users with assigned tasks, users can report task progress and client can review it with raising support ticket on need basis. Also users can make quotations, create invoice and do payment reminders etc.
+                            
+                            List Price : INr 28,800 + GST</p>
+                        <h3>ANDi Saloon</h3>
+                        <p>Sector - Business
+        
+                            Suitable for beauty parlor / saloon for managing their activities and day to day processes.
+                            
+                            List Price : INr 25,200 + GST</p>
+                        <h3>ANDi Bilty</h3>
+                        <p>Sector - Business
+        
+                            Simple online portal for transporters to make bilties. It is multi user, multi location based cloud portal with income expense tracking. A very powerful yet easy to use software..
+                            
+                            List Price : INr 18,000 + GST</p>
+                        <h3>ANDi Classified</h3>
+                        <p>Sector - Business
+        
+                            Advanced classified portal for buying and selling products with ads posting. Buyers and seller can chat with each others.
+                            
+                            List Price : INr 32,400 + GST</p>
+                        <h3>ANDi ECom 1</h3>
+                        <p>Sector - Ecommerce
+
+                            Fully responsive single vendor (SV) Ecom portal with advanced product management function, Unlimited product categories & subcategories with product details like catalog, product attributes, product variations, product collections, discounts,etc. Inbuilt product search filter option for user with Quick product view, product zoom, fast checkout and multiple payment options. Powerful yet easy to use portal for all kind of Ecommerce applications.
+                            
+                            List Price : INr 36,000 + GST</p>
+                        <h3>ANDi ECom 2</h3>
+                        <p>Sector - Ecommerce
+
+                            Advanced Level Single Vendor (SV) Ecom Portal with multi language display option. Inbuilt order management with editable frontend settings, FAQ, Services, etc by admin for easy portal management.
+                            
+                            List Price : INr 39,600 + GST</p>
+                        <h3>ANDi ECom 4</h3>
+                        <p>Sector - Ecommerce
+
+                            Basic Level Single Vendor (SV) Ecom Portal with user & order management with payment gateway option.
+                            
+                            List Price : INr 25,200 + GST</p>
+                        <h3>ANDi ECom 5</h3>
+                        <p>Sector - Ecommerce
+
+                            Professional single vendor (SV) Ecom Portal, fully responsive design with many unique features like front end, banner and website colour changing by admin. Fully secured coding & easy product management with brand wise, category wise display. Add-on features like multi language, multi currency, multi payment option, advanced product search, flash deals, promo codes, product variant showcasing, product wish listing, push notification option, etc for easy business processing.
+                            
+                            List Price : INr 45,000 + GST</p>
+                        <h3>ANDi ECom 5M</h3>
+                        <p>Sector - Ecommerce
+
+                            Professional Multi vendor (MV) Ecom Portal, fully responsive design with many unique features like front end, banner and website colour changing by admin. Fully secured coding & easy product management with brand wise, category wise display. Add-on features like multi language, multi currency, multi payment option, advanced product search, flash deals, promo codes, product variant showcasing, product wish listing, push notification option, etc for easy business processing. Powerful multi vendor system with auto sales commission deduction & reporting to vendors using portal by admin.
+                            
+                            List Price : INr 63,000 + GST</p>
+                        <h3>ANDi ECom 6</h3>
+                        <p>Sector - Ecommerce
+
+                            Professional single vendor (SV) Ecom Portal, Fully responsive with unique frontend design. Advanced product management with category, subcategory based product display. Time bound order execution features with product rating and comment option by users. Addon-staff login panel for managing sub-business activities like product management, profile updation etc. Powerful admin panel having product, user & payment management funtion with social link, Google analytic and subscriber management. One of our finest product for professional sellers.
+                            
+                            List Price : INr 50,400 + GST</p>
+                        <h3>ANDi ECom 7</h3>
+                        <p>Sector - Ecommerce
+
+                            Entry level single vendor (SV) Ecom portal, fully responsive design with product management. Admin can add multiple product with photo, description, price and enquiry links. Interested buyers can send enquiry to seller for further action. Social link integration with frontend color change option.
+                            
+                            List Price : INr 16,200 + GST</p>
+                        <h3>ANDi Coaching</h3>
+                        <p>Sector - Education
+
+                            Suitable for coaching institute for managing the student data and complete course management in the institute
+                            
+                            List Price : INr 19,800 + GST</p>
+                        <h3>ANDi Institute</h3>
+                        <p>Sector - Education
+
+                            Suitable for small coaching centres, handling enquiries to enrolling students in various courses in different batches and then managing other activities like fee, certificate, progress reports etc for students.
+                            
+                            List Price : INr 21,600 + GST</p>
+                        <h3>ANDi Library</h3>
+                        <p>Sector - Education
+
+                            Solution for libraries for complete book keeping and book record maintaining
+                            
+                            List Price : INr 21,600 + GST</p>
+                        <h3>ANDi Class 1</h3>
+                        <p>Sector - Education
+
+                            Multi language portal, suitable for online courses sellling & teachers based on location
+                            
+                            List Price : INr 25,200 + GST</p>
+                        <h3>ANDi Course</h3>
+                        <p>Sector - Education
+
+                            Suitable for business leaders who want to sell their multiple courses online. Here student/buyer can enroll online, purchase desired course using integrated cart with payment option. Create courses sell and make money
+                            
+                            List Price : INr 21,600 + GST</p>
+                        <h3>ANDi Exam 1</h3>
+                        <p>Sector - Education
+
+                            Advanced software for taking exams online
+                            
+                            List Price : INr 23,400 + GST</p>
+                        <h3>ANDi Exam 2</h3>
+                        <p>Sector - Education
+
+                            Web portal for taking any type of exams with front CMS changing option and inbuild timer.
+                            
+                            List Price : INr 30,600 + GST</p>
+                        <h3>ANDi School 1</h3>
+                        <p>Sector - Education
+
+                            Online school management system (multi language) with parents login to keep track on their child activities. Having features like sibling management, transport management, home work monitoring etc
+                            
+                            List Price : INr 27,000 + GST</p>
+                        <h3>ANDi School 2</h3>
+                        <p>Sector - Education
+
+                            Simple school management system for student record keeping
+                            
+                            List Price : INr 23,400 + GST</p>
+                        <h3>ANDi School 3</h3>
+                        <p>Sector - Education
+
+                            Suitable for managing key school activities like attendance, time table, Student records, etc with multiple theme options
+                            
+                            List Price : INr 27,000 + GST</p>
+                        <h3>ANDi School 4</h3>
+                        <p>Sector - Education
+
+                            Online school management system (multi language) with parents login to keep track on their child activities. Having features like sibling management, transport management, home work monitoring etc
+                            
+                            List Price : INr 28,800 + GST</p>
+                        <h3>ANDi School 7</h3>
+                        <p>Sector - Education
+                            
+                            Complete school management with integrated Online Exam for students.
+                            
+                            List Price : INr 21,600 + GST</p>
+                            
+                                
+                         <h3>ANDi School 8</h3>
+                        <p>Sector - Education
+                            
+                            Online school management system (multi language) with parents login to keep track on their child activities. Having features like sibling management, transport management, home work monitoring etc
+                            
+                            List Price : INr 28,800 + GST</p>
+                            
+                                
+                        <h3>ANDi School 10</h3>
+                        <p>Sector - Education
+                            
+                            Advanced online school management system with parents login to keep track on their child activities. Inbuilt complete student management section with attendance, Online exams, Download center, Homework, Fee collection and Zoom live classes makes this portal unique. Its powerful Library, Inventory, Transport and Hostel management sections gives support to Admin. Its features like Front office, HR, Alumni and various reporting are very usefual and admin can easily manage web portal frontpage for event, gallery, news, Media, Banners etc. A truely comprehensive school management portal most suitable for mid to large size schools.
+                            
+                            List Price : INr 39,600 + GST</p>
+                            
+                                
+                         <h3>ANDi School 11</h3>
+                         <p>Sector - Education
+                            
+                            Advanced Multi school management system with parents login to keep track on their child activities. Inbuilt complete student management section with attendance, Online exams, Download center, Homework, Fee collection and Zoom live classes makes this portal unique. Its powerful Library, Inventory, Transport and Hostel management sections gives support to Admin. Its features like Front office, HR, Alumni and various reporting are very usefual and admin can easily manage web portal frontpage for event, gallery, news, Media, Banners etc. A truely comprehensive Multi School management portal most suitable large size schools having multiple school location.
+                            
+                            List Price : INr 46,800 + GST</p>
+                            
+                                
+                         <h3>ANDi Hostel</h3>
+                          <p>Sector - Education
+                            
+                            Suitable for hostels for managing hostel activities like bed allocation, rooms, fee etc
+                            
+                            List Price : INr 23,400 + GST</p>
+                            
+                                
+                         <h3> ANDi Ticket</h3>
+                         <p>Sector - Tours & Travels
+                            
+                            For movie ticket booking like PVR, bookmyshow etc.
+                            
+                            List Price : INr 32,400 + GST</p>
+                            
+                                
+                          <h3>ANDi Transport</h3>
+                            <p>Sector - Tours & Travels
+                            
+                            Suitable for small travel companies / transporters for vehical booking, controlling drivers and managing other business activities.
+                            
+                            List Price : INr 16,200 + GST</p>
+                            
+                                
+                         <h3>ANDi Travel</h3>
+                          <p>Sector - Tours & Travels
+                            
+                            Advanced travel portal suitable for travel agents for hotel booking like goibibo, makemytrip, etc with separate login for customers, guests, supplier, manager and admin for easy managing of business activities.
+                            
+                            List Price : INr 39,600 + GST</p>
+                            
+                                
+                         <h3>ANDi Matrimony 1</h3>
+                            <p>Sector - Matrimony
+                            
+                            Complete online matrimonial portal with responsive design and multi language selection option. Candidates can search profiles online by per their requirements after taking any payment plan as per their needs.
+                            
+                            >
+                            List Price : INr 45,000 + GST</p>
+                            
+                                
+                         <h3>ANDi Matrimony 21</h3>
+                           <p> Sector - Matrimony
+                            
+                            Matrimonial portal for finding match based on some unique searches like caste, star sign, moon sign, interest, education, hobbies etc
+                            
+                            List Price : INr 32,400 + GST</p>
+                            
+                                
+                         <h3>ANDi Jobs 1</h3>
+                           <p>Sector - Recruitment
+                            
+                            Basic job portal where user can create profile, make resume search for jobs and apply. Also companies can list opening post and recruit candidates
+                            
+                            List Price : INr 16,200 + GST</p>
+                            
+                                
+                           <h3> ANDi Jobs 2</h3>
+                           <p>Sector - Recruitment
+                            
+                            Smart job portal with very attractive front page - user can create profile, make resume search for jobs and apply. Also companies can list opening post and recruit candidates
+                            
+                            List Price : INr 32,400 + GST</p> 
+                            
+                                
+                            <h3>ANDi Jobs 5</h3>
+                         <p>Sector - Recruitment
+                            
+                            Professional Job portal with separate Job seekers login ( for profile registration, CV upload, job search & job apply ), Separate companies or employer login ( for company profile updation with logo, Job posting, candidate resume search, etc ). Portal is managed by powerful admin role to control all business activities like managing candidates, employer companies, job posts, feature job, etc with routing website management.
+                            
+                            List Price : INr 36,000 + GST</p>
+                            
+                                
+                         <h3>ANDi Property</h3>
+                         <p>Sector - Real Estate
+                            
+                            Advanced property portal managed by Admin - it is most suitable for small property dealers/agents who after getting agent membership from admin, can sell, rent or purchase displayed property online.
+                            
+                            List Price : INr 30,600 + GST</p>
+                            
+                                
+                         <h3>ANDi Election</h3>
+                         <p>Sector - Politics
+                            
+                            Ultimate solution for all type of Election Campaign Management. In this, admin can add area, volunteers, voters etc and make teams to manage campaign plans based on SWAT analysis. In addition, various event and expense record can be managed easily.
+                            
+                            List Price : INr 16,200 + GST</p>
+                            
+                                
+                         <h3>ANDi NGO</h3>
+                         <p>Sector - NGO
+                            
+                            Suitable for NGO for managing their activities
+                            
+                            List Price : INr 28,800 + GST</p>
+                            
+                                
+                         <h3>ANDi Hospital 1</h3>
+                         <p>Sector - Medical
+                            
+                            Advanced hospital management ERP for managing all activities required to run hospital. Separate login are available for Doctor, patients, Nurse, Admin, Receptionist, lab, pharma, TPA, etc
+                            
+                            List Price : INr 28,800 + GST</p>
+                            
+                                
+                         <h3>ANDi Hospital 2</h3>
+                         <p>Sector - Medical
+                            
+                            Suitable for Clinic activities management having separate login for doctor, patients and Administrator functions.
+                            
+                            List Price : INr 27,000 + GST</p>
+                            
+                                
+                         <h3>ANDi Food Booking</h3>
+                         <p>Sector - Food
+                            
+                            Suitable for restaurant for food orders for customers
+                            
+                            List Price : INr 25,200 + GST</p>
+                            
+                                
+                         <h3>ANDi Restaurant 1</h3>
+                         <p>Sector - Food
+                            
+                            Suitable for managing restaurant activities
+                            
+                            List Price : INr 30,600 + GST</p>
+                            
+                                
+                         <h3>ANDi Restaurant 2</h3>
+                         <p>Sector - Food
+                            
+                            Suitable for managing multiple restaurants outlets for all activities like revenue, tables booking etc.
+                            
+                            List Price : INr 39,600 + GST</p>
+                            
+                                
+                         <h3>NDi Apartment</h3>
+                         <p>Sector - Facility Management
+                            
+                            Responsive Apartment Management System suitable for society / owners of multi appartments or real estate properties to manage tanents, their rent payout, staff, complaints & maintenance etc. This is very powerful software with detailed reporting and easy functionality.
+                            
+                            List Price : INr 23,400 + GST</p>
+                            
+                                
+                         <h3>ANDi Visitor</h3>
+                         <p>Sector - Facility Management
+                            
+                            Suitable for housing societies or small offices for managing visitor management
+                            
+                            List Price : INr 21,600 + GST</p>
+                            
+                                
+                         <h3>ANDi Event</h3>
+                         <p>Sector - Event Management
+                            
+                            suitable for event organizer for managing their business activities.
+                            
+                            List Price : INr 27,000 + GST</p>
+                            
+                                
+                         <h3>ANDi Banking</h3>
+                            <p>Sector - Banking
+                            
+                            A very powerful, fast and secured banking portal with features like account statement, credit/debit facility and complete user management system. Suitable for mini banks or micro finance institutes for managing all banking processes and activities
+                            
+                            List Price : INr 25,200 + GST</p>
+                            
+                                
+                         <h3>ANDi Blog</h3>
+                         <p>Sector - Cretive
+                            
+                            Perfect Bloging portal with advanced features & smooth functionality.
+                            
+                            List Price : INr 28,800 + GST</p>
+                            
+                                
+                         <h3>ANDi News</h3>
+                         <p>Sector - Cretive
+                            
+                            Advanced online News portal suitable for News or advertising agencies. Admin can manage all the post / news related activities efficiently & add video links etc. Also admin can make reporters and allow them to post news in portal in controlled manner with his approval.
+                            
+                            List Price : INr 25,200 + GST</p>
+                            
+                                
+                        <h3> ANDi Dating</h3>
+                        <p>Sector - Cretive
+                            
+                            Dating portal is a social discovery website for meeting new people and to make friendly and romantic connections with people in real time.
+                            
+                            List Price : INr 28,800 + GST</p>
+    </div>
+    <header class="site-header">
+        <h1>Welcome to ANDi Software Solutions</h1>
+        <div class="border-box">
+            
+            <p>CONTACT 
+                <p>For any kind of query, contact us with the details below.</p>
+                
+                <p>+91-7015574125</p>
+                <p>andisoftwaresolutions@gmail.com</p>
+                <p>ANDi Software Solutions</p>
+                <p>Panipat & Noida</p>
+                <p>Follow us : <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank">
+                        <img src="fb.png" alt="Facebook" height="22px">
+                    </a>
+                    <a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank">
+                        <img src="insta.jpeg" alt="Instagram" height="22px">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC0mfGwSDteVVWqmggE3MtYQ" target="">
+                        <img src="youtube.jpeg" alt="youtube" height="22px">
+                    </a>
+                    <a href="https://www.linkedin.com/company/andisoftwaresolutions/">
+                        <img src="ln.png" alt="linkedin"  height = "22px">
+                    </a>
+                </div>
+                </p>
+                </p>
+        </div>
+        
+    </header>
+    
+    
+</body>
+<script>
+    function showSection(sectionId) {
+        // Hide all sections first
+        document.getElementById("home-content").style.display = "none";
+        document.getElementById("contact-details").style.display = "none";
+        document.getElementById("digital-marketing").style.display = "none";
+        document.getElementById("products-services").style.display = "none";
+        document.getElementById("cloud-software").style.display = "none";
+        // Show the requested section
+        if (sectionId) {
+            document.getElementById(sectionId).style.display = "block";
+        }
+    }
+
+    document.querySelector("a[href='#home']").addEventListener("click", function(event) {
+        event.preventDefault();
+        showSection("home-content");
+    });
+
+    document.querySelector("a[href='#contact']").addEventListener("click", function(event) {
+        event.preventDefault();
+        showSection("contact-details");
+    });
+    document.querySelector("a[href ='#digital-marketing']").addEventListener("click",function(event){
+        event.preventDefault();
+        showSection("digital-marketing")
+    });
+    document.querySelector("a[href = '#product']").addEventListener("click",function(event){
+        event.preventDefault();
+        showSection("products-services")
+    });
+    document.querySelector("a[href = '#cloud-software']").addEventListener("click",function(event){
+        event.preventDefault();
+        showSection("cloud-software")  
+    });
+
+    
+   let currentSlide = 0;
+const slides = document.querySelectorAll(".slider img");
+const totalSlides = slides.length;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+    });
+    slides[index].classList.add("active");
+}
+
+// Next Slide
+document.getElementById("nextBtn").addEventListener("click", function() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+});
+
+// Previous Slide
+document.getElementById("prevBtn").addEventListener("click", function() {
+    currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+});
+
+// Auto Slide Every 3 Seconds
+function autoSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+}
+let slideInterval = setInterval(autoSlide, 3000);
+
+// Pause on Hover (Optional)
+document.querySelector(".slider").addEventListener("mouseenter", function() {
+    clearInterval(slideInterval);
+});
+document.querySelector(".slider").addEventListener("mouseleave", function() {
+    slideInterval = setInterval(autoSlide, 3000);
+});
+
+// Show first slide initially
+showSlide(currentSlide);
+
+
+</script>
+
+</html>
